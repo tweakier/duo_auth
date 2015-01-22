@@ -1,4 +1,4 @@
-roundcube_duo_auth
+roundcube duo_auth
 ==================
 
 This is a Roundcube webmail plugin that enables Duo Two Factor Authentication.
@@ -8,6 +8,8 @@ It creates an additional page after successful username/password authentication 
 INSTALLATION
 ============
 Same as any other Roundcube plugin.
+
+*PLEASE NOTE* if you have downloaded the plugin via the "Download Zip" button in git, rename the extracted folder to "duo_auth"
 
 CONFIGURATION
 =============
