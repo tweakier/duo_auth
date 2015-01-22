@@ -9,7 +9,8 @@ INSTALLATION
 ============
 Same as any other Roundcube plugin.
 
-*PLEASE NOTE* if you have downloaded the plugin via the "Download Zip" button in git, rename the extracted folder to "duo_auth"
+**PLEASE NOTE** 
+if you have downloaded the plugin via the "Download Zip" button in git, rename the extracted folder to "duo_auth"
 
 CONFIGURATION
 =============
