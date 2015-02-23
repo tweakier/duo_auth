@@ -1,7 +1,7 @@
 roundcube duo_auth
 ==================
 
-This is a Roundcube webmail plugin that enables Duo Two Factor Authentication.
+This is a Roundcube webmail plugin that enables Duo Security Two Factor Authentication.
 
 It creates an additional page after successful username/password authentication that requires a 2nd Factor of Authentication using Duo Security (push, sms, call, code).
 
