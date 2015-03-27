@@ -2,10 +2,10 @@
 /**
  * Two Factor Authentication using Duo Security for RoundCube
  *
- * @version 1.0
+ * @version 1.01
  *
  * Author(s): Alexios Polychronopoulos <dev@pushret.co.uk>
- * Date: 24/11/2014
+ * Date: 27/03/2015
  */
 
 require_once 'duo_web.php';
@@ -31,7 +31,7 @@ class duo_auth extends rcube_plugin
 		$this->register_handler('plugin.body', array($this, 'generate_html'));
 		
 		//indicates that user/pass authentication has succeeded.
-		$_SESSION['_Duo_Auth'] = time;
+		$_SESSION['_Duo_Auth'] = True;
     	
 		$rcmail->output->send('plugin');
 	}
@@ -98,7 +98,7 @@ class duo_auth extends rcube_plugin
 			if($resp != NULL)
 			{
 				//indicates successful Duo 2FA.
-				$_SESSION['_Duo_2FAuth'] = time;
+				$_SESSION['_Duo_2FAuth'] = True;
 				
 				//redirect to inbox.
 				header('Location: ?_task=mail');
@@ -118,13 +118,18 @@ class duo_auth extends rcube_plugin
 		return rcmail::get_instance()->config->get($v);
 	}
 	
-	//unsets all the session variables used in the plugin and redirects to the logout page.
+	//unsets all the session variables used in the plugin, 
+	//invalidates the user's session and redirects to the login page.
 	private function fail() 
 	{
+		$rcmail = rcmail::get_instance();
+		
 		unset($_SESSION['_Duo_Auth']);
 		unset($_SESSION['_Duo_2FAuth']);
 		
-		header('Location: ?_task=logout');
+		$rcmail->kill_session();
+		header('Location: ?_task=login');
+		
 		exit;
 	}	
 	
