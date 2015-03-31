@@ -7,9 +7,9 @@ It creates an additional page after successful username/password authentication 
 
 INSTALLATION
 ============
-Same as any other Roundcube plugin.
+Same as any other Roundcube plugin. Clone the repository in the plugins directory of your Roundcube installation or download the zip from GitHub and unzip it in that directory.
 
-**PLEASE NOTE -** If you have downloaded the plugin via the "Download Zip" button in git, rename the extracted folder to "duo_auth"
+**PLEASE NOTE -** If you have downloaded the plugin via the "Download Zip" button in GitHub, rename the extracted folder to "duo_auth"
 
 CONFIGURATION
 =============
