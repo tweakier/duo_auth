@@ -16,6 +16,3 @@ CONFIGURATION
 Enter all keys necessary for integration with Duo in the config.inc.php file.
 Assuming a Duo integration has already been created in Duo's Admin Panel, you will be able to find all the information requested in the config.inc.php there.
 
-CREDITS
-=======
-Author: Alexios Polychronopoulos - Please send any feedback, feature request or bug report to dev@pushret.co.uk
